@@ -1,0 +1,22 @@
+<
+https://img.example.com/data/IMG_0001.jpg
+referer: https://img.example.com/data/
+User-Agent: Mozilla/5.0 TestAgent
+>
+<
+https://img.example.com/data/IMG_0001.jpg
+>
+<
+https://other.example.com/data/IMG_0001.jpg
+>
+<
+https://img.example.com/data/IMG_0001.jpg
+filename: 自定义名字.mp4
+>
+<
+https://img.example.com/data/IMG_0001.jpg
+filename: 自定义名字.mp4
+>
+<
+https://cdn.example.com/v/%E4%B8%AD%E6%96%87%20clip.mp4?token=abc
+>

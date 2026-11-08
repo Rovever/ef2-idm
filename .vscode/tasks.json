@@ -1,0 +1,84 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "rc",
+			"command": "rc.exe",
+			"args": [
+				"${workspaceFolder}\\src\\resource.rc"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}\\src"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"detail": "编译RC资源。"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: cl.exe debug",
+			"command": "cl.exe",
+			"args": [
+				"/Zi",
+				"/EHsc",
+				"/nologo",
+				"/Fe:",
+				"${workspaceFolder}\\ef2.exe",
+				"${workspaceFolder}\\main.cpp",
+				"${workspaceFolder}\\src\\resource.res"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"detail": "调试: cl.exe",
+			"dependsOn": [
+				"rc"
+			]
+		},
+		{
+			"type": "shell",
+			"label": "C/C++: cl.exe build",
+			"command": "cl.exe",
+			"args": [
+				"/GF",
+				"/O2",
+				"/EHsc",
+				"/D",
+				"NDEBUG",
+				"/Fe:",
+				"${workspaceFolder}\\ef2.exe",
+				"${workspaceFolder}\\main.cpp",
+				"${workspaceFolder}\\src\\resource.res"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "编译器: cl.exe",
+			"dependsOn": [
+				"rc"
+			]
+		},
+		{
+			"type": "typescript",
+			"detail": "编译配套js模块",
+			"tsconfig": "typescript/tsconfig.json",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build",
+			"label": "tsc: build - typescript/tsconfig.json"
+		}
+	]
+}

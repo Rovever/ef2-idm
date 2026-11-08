@@ -1,0 +1,15 @@
+# Git 行尾规范
+# 默认保持文件原样，不做任何换行转换（多数源码自带 UTF-8 BOM，避免被改写）
+* -text
+
+# Windows 批处理必须 CRLF，否则会出现「命令不存在」
+# 仓库内规范为 LF，检出到工作区时自动还原为 CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.reg text eol=crlf
+
+# 二进制资源
+*.tlb binary
+*.ico binary
+*.res binary
+*.exe binary

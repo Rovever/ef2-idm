@@ -1,0 +1,20 @@
+## Ignore build results
+*.exe
+*.tlh
+*.tli
+*.pdb
+*.obj
+*.res
+/ef2.*
+
+## 本地备份副本（上游 git 历史中已保留原始版本）
+backup/
+
+## 编译 / 测试中间产物
+*.exp
+*.ilk
+*.idb
+*.tlog
+*.log
+1.reg
+.vs/
